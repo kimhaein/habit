@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './Components/App/index.js';
+import Index from './components/app/index.js';
 
 ReactDOM.render(<Index />, document.getElementById('root'));
 

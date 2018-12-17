@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import TopNav from '../nav/TopNav';
 
 class App extends Component {
   render() {
     return (
       <div>
-          환경 셋팅
+          <TopNav/>
       </div>
     );
   }

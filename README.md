@@ -1,5 +1,5 @@
 # hobit
-> 티끌모아 습관 만들기 프로젝트 모바일 웹
+> 습관 만들기 및 동기 부여 모바일 웹 프로젝트
 
 <!--![](../header.png)-->
 
@@ -7,17 +7,15 @@
 * ES6
 * WebPack
 * React
-* Redux
-* Popmotion
+* react-redux 
+* react-pose
 
 ## Server
-
 * PHP
 * MariaDB
 * Mysql
 * REST API
 
 ## 업데이트 내역
-
-* 2018.12.15
+* 2018.12.17
     * 개발 환경 세팅
