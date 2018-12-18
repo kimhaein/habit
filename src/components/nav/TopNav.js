@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+// Image
+import sideNavImg from '../../assets/imgs/icons8-menu-32.png';
+import topLogoImg from '../../assets/imgs/top_logo.png';
+import createImg from '../../assets/imgs/icons8-create-32.png';
 
 class TopNav extends Component {
   render() {
     return (
-      <div>
-        <div><img src="https://img.icons8.com/ios/100/000000/menu-filled.png" alt="sideNavs"/></div>
-        <div>로고</div>
-        <div><img src="https://img.icons8.com/small/100/000000/create-new.png" alt="create"/></div>
+      <div className="top_nav">
+        <div className="btn_side_nav"><img src={sideNavImg} alt="sideNav"/></div>
+        <div className="top_logo"><a href="/"><img src={topLogoImg} alt="topLogo"/></a></div>
+        <div className="btn_create"><a href="/"><img src={createImg} alt="create"/></a></div>
       </div>
     );
   }

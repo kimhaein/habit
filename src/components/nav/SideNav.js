@@ -3,10 +3,11 @@ import React, { Component } from 'react';
 class SideNav extends Component {
   render() {
     return (
-      <div>
-        <div>메뉴</div>
-        <div>로고</div>
-        <div>새글</div>
+      <div className="side_nav">
+        <div><a href="/">메뉴</a></div>
+        <div><a href="/">메뉴</a></div>
+        <div><a href="/">메뉴</a></div>
+        <div><a href="/">메뉴</a></div>
       </div>
     );
   }

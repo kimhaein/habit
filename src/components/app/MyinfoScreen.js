@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TopNav from '../nav/TopNav';
 
-class App extends Component {
+class MyinfoScreen extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default MyinfoScreen;

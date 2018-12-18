@@ -10,6 +10,7 @@
     "react-pose": "^4.0.4",
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
+    "react-slick": "^0.23.2",
     "redux": "^4.0.1",
     "redux-actions": "^2.6.4"
   },

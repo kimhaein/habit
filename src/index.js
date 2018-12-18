@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Index from './components/app/index.js';
+import './assets/css/reset.css';
+import './assets/css/style.css';
+import Index from './components/app/App.js';
 
 ReactDOM.render(<Index />, document.getElementById('root'));
 
