@@ -5,9 +5,15 @@ body {
 #root {
   position: relative;
 }
+a {
+  display: block;
+  width:100%;
+  height:100%;
+  color:#4b403d
+}
 /* top_nav */
 .top_nav {
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   width:100%;
@@ -16,6 +22,7 @@ body {
   box-sizing: border-box;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background:#FFFFFF;
+  z-index: 99;
 }
 .top_nav > div {
   float:left;
@@ -41,13 +48,14 @@ body {
 /* side_nav */
 .side_nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   width:75%;
-  height:100%;
+  height:100vh;
   box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.35);
   background: #4b403d;
+  z-index: 100;
 }
 .side_nav a {
   color:#FFFFFF;
