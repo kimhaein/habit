@@ -10,11 +10,12 @@ class MainSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    const {cardList} = this.props
     return (
       <Slider {...settings} >
         <div className="main_slider">
           <div className="slier_thumnail"></div>
-          <p className="title">물 2L씩 마시기</p>
+          <p className="title">{cardList[0].title}</p>
           <div className="graph_wrap">
             <span className="graph"></span>
           </div>
@@ -22,15 +23,7 @@ class MainSlider extends Component {
         </div>
         <div className="main_slider">
           <div className="slier_thumnail"></div>
-          <p className="title">자기 전 스트레칭</p>
-          <div className="graph_wrap">
-            <span className="graph"></span>
-          </div>
-          <p>80%</p>
-        </div>
-        <div className="main_slider">
-          <div className="slier_thumnail"></div>
-          <p className="title">산책 가기</p>
+          <p className="title">{cardList[1].title}</p>
           <div className="graph_wrap">
             <span className="graph"></span>
           </div>

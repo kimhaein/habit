@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 class CardList extends Component {
+
   render() {
+    const {changeScreen,data} = this.props
     return (
-      <div className="card_list">
+      <div className="card_list" onClick={changeScreen}>
         <div className="card_header">
-          <p>물 2L씩 마시기</p>
+          <p>{data.title}</p>
           <span></span>
         </div>
         <ul className="card_contents">

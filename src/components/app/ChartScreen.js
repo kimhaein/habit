@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import TopNav from '../nav/TopNav';
+import React, { Component } from "react";
+import TopNav from "../nav/TopNav";
 
 class ChartScreen extends Component {
   render() {
     return (
       <div>
-          <TopNav/>
+        <TopNav />
       </div>
     );
   }
