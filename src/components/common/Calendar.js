@@ -3,32 +3,11 @@ import { Calendar, Badge } from "antd";
 import moment from "moment";
 
 class Calendars extends Component {
-  state = {
-    dateDate: [
-      {
-        dateID: 1,
-        date: "2018-12-24",
-        type: "default"
-      },
-      {
-        dateID: 2,
-        date: "2018-12-25",
-        type: "processing"
-      },
-      {
-        dateID: 3,
-        date: "2018-12-26",
-        type: "default"
-      },
-      {
-        dateID: 4,
-        date: "2018-12-27",
-        type: "processing"
-      }
-    ]
-  };
+  /**
+   *
+   */
   getListData = value => {
-    let listData = this.state.dateDate.filter(
+    let listData = this.props.dateDate.filter(
       item => value === moment(item.date).format("YYYY-MM-DD")
     );
     return listData;
@@ -49,7 +28,11 @@ class Calendars extends Component {
   render() {
     return (
       <div>
-        <Calendar fullscreen={false} dateCellRender={this.dateCellRender} />
+        <Calendar
+          fullscreen={false}
+          dateCellRender={this.dateCellRender}
+          validRange={[moment("2018-12-12"), moment("2018-12-30")]}
+        />
       </div>
     );
   }

@@ -1,1 +1,27 @@
 @import "~antd/dist/antd.css";
+
+/* curstom */
+.ant-radio-button-wrapper-checked:first-child {
+  border-color: #4b403d;
+}
+.ant-radio-button-wrapper-checked {
+  color: #4b403d;
+}
+.ant-fullcalendar-selected-day .ant-fullcalendar-value,
+.ant-fullcalendar-month-panel-selected-cell .ant-fullcalendar-value {
+  background: #4b403d;
+}
+.ant-fullcalendar-today .ant-fullcalendar-value,
+.ant-fullcalendar-month-panel-current-cell .ant-fullcalendar-value {
+  box-shadow: 0 0 0 1px #4b403d inset;
+}
+.ant-fullcalendar-value:hover {
+  background-color: transparent;
+  color: #4b403d;
+}
+.ant-badge-status-processing:after {
+  border: 1px solid #4b403d;
+}
+.ant-badge-status-processing {
+  background-color: #4b403d;
+}

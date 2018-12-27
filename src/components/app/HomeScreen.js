@@ -13,8 +13,8 @@ class HomeScreen extends Component {
     console.log(listData);
     const cardList = listData.map(item => (
       <CardList
-        changeScreen={() => this._changeScreen(item.id)}
-        key={item.id}
+        changeScreen={() => this._changeScreen(item.cardId)}
+        key={item.cardId}
         data={item}
       />
     ));

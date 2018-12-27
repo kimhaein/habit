@@ -9,7 +9,7 @@ class DetailScreen extends Component {
     return (
       <div className="main_wrap">
         <div>{detailData.title}</div>
-        <Calendar />
+        <Calendar dateDate={detailData.dateDate} />
         <div>{detailData.completion_rate}%</div>
         <Memo memo={detailData.memo} />
       </div>

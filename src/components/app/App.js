@@ -8,12 +8,11 @@ import HomeScreen from "../app/HomeScreen";
 
 class App extends Component {
   state = {
-    isDetail: true,
     screen: "",
     detailNo: null,
     cardList: [
       {
-        id: 1,
+        cardId: 1,
         title: "매일 물 1리터 마시기",
         mon: true,
         tue: true,
@@ -24,7 +23,7 @@ class App extends Component {
         sun: true
       },
       {
-        id: 2,
+        cardId: 2,
         title: "매일 스트레칭",
         mon: true,
         tue: true,
@@ -39,14 +38,56 @@ class App extends Component {
       {
         id: 1,
         title: "매일 물 1리터 마시기",
-        date: ["2018.01.22", "2018.01.23", "2018.01.24"],
+        dateDate: [
+          {
+            dateID: 1,
+            date: "2018-12-24",
+            type: "default"
+          },
+          {
+            dateID: 2,
+            date: "2018-12-25",
+            type: "processing"
+          },
+          {
+            dateID: 3,
+            date: "2018-12-26",
+            type: "default"
+          },
+          {
+            dateID: 4,
+            date: "2018-12-27",
+            type: "processing"
+          }
+        ],
         completion_rate: 80,
         memo: "물을 마시자 물을 마시자"
       },
       {
         id: 2,
         title: "매일 스트레칭",
-        date: ["2018.02.12", "2018.02.13", "2018.01.13"],
+        dateDate: [
+          {
+            dateID: 1,
+            date: "2018-12-24",
+            type: "processing"
+          },
+          {
+            dateID: 2,
+            date: "2018-12-25",
+            type: "processing"
+          },
+          {
+            dateID: 3,
+            date: "2018-12-26",
+            type: "processing"
+          },
+          {
+            dateID: 4,
+            date: "2018-12-27",
+            type: "processing"
+          }
+        ],
         completion_rate: 50,
         memo: "유투브 링크 : ~~~~"
       }
