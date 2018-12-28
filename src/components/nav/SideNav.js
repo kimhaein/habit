@@ -1,22 +1,24 @@
 import React, { Component } from "react";
+import { Drawer } from "antd";
 
 class SideNav extends Component {
   render() {
+    const { showDrawer, modalVisible } = this.props;
     return (
-      <div className="side_nav">
+      <Drawer
+        placement={"left"}
+        closable={true}
+        onClose={showDrawer}
+        visible={modalVisible}
+      >
+        <div>img</div>
         <div>
-          <a href="/">메뉴</a>
+          <p>Main</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
+          <p>Some contents...</p>
         </div>
-        <div>
-          <a href="/">메뉴</a>
-        </div>
-        <div>
-          <a href="/">메뉴</a>
-        </div>
-        <div>
-          <a href="/">메뉴</a>
-        </div>
-      </div>
+      </Drawer>
     );
   }
 }
