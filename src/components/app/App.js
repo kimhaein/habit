@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 // Nav
 import TopNav from "../nav/TopNav";
-import SideNav from "../nav/SideNav";
 // screen
 import DetailScreen from "../app/DetailScreen";
 import HomeScreen from "../app/HomeScreen";
@@ -41,12 +40,12 @@ class App extends Component {
         dateDate: [
           {
             dateID: 1,
-            date: "2018-12-24",
+            date: "2018-11-24",
             type: "default"
           },
           {
             dateID: 2,
-            date: "2018-12-25",
+            date: "2018-11-25",
             type: "processing"
           },
           {
@@ -121,7 +120,6 @@ class App extends Component {
     return (
       <Fragment>
         <TopNav />
-        <SideNav />
         {this._renderScreen()}
       </Fragment>
     );

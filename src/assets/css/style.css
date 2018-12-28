@@ -1,3 +1,10 @@
+.f_left {
+  float: left;
+}
+.f_right {
+  float: right;
+}
+
 /* Layout */
 body {
   background: #efebe9;
@@ -10,6 +17,40 @@ a {
   width: 100%;
   height: 100%;
   color: #4b403d;
+}
+button {
+  background: #ffffff;
+  border: 1px solid #4b403d;
+  font-weight: 600;
+  color: #4b403d;
+}
+.btn_wrap {
+  margin: 16px;
+}
+.btn_m {
+  width: 48%;
+  height: 35px;
+}
+.btn_color {
+  background: #4b403d;
+  border: 1px solid #4b403d;
+  color: #ffffff;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid #e2e8ed;
+  background: transparent;
+  color: #e2e8ed;
+  text-align: center;
+}
+textarea {
+  border-color: #e2e8ed;
+}
+:focus {
+  outline: none;
 }
 /* top_nav */
 .top_nav {
@@ -46,20 +87,7 @@ a {
   float: right;
 }
 /* side_nav */
-.side_nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 75%;
-  height: 100vh;
-  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.35);
-  background: #4b403d;
-  z-index: 100;
-}
-.side_nav a {
-  color: #ffffff;
-}
+
 /* main_slider */
 .main_wrap {
   position: absolute;
@@ -192,4 +220,53 @@ a {
 .slick-dots li.slick-active button:before {
   color: #ffffff;
   opacity: 1;
+}
+
+/* detail_wrap */
+.detail_wrap {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+.detail_wrap .detail_title {
+  width: 100%;
+  height: 100px;
+  padding: 30px 20%;
+  background: #4b403d;
+}
+.detail_wrap .calendar {
+  margin: 16px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba(80, 92, 98, 0.13);
+  box-sizing: border-box;
+}
+.detail_wrap .detail_rate_wrap {
+  height: 25px;
+  margin: 16px;
+  background: #ffffff;
+}
+.detail_wrap .detail_rate {
+  height: 25px;
+  background: #4b403d;
+}
+.detail_wrap .detail_rate span {
+  float: right;
+  margin-right: 10px;
+  line-height: 25px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.detail_wrap .memo {
+  margin: 16px;
+  padding: 10px;
+  background: #ffffff;
+}
+.detail_wrap .memo label {
+  display: block;
+  margin-bottom: 10px;
+}
+.detail_wrap .memo textarea {
+  width: 100%;
 }

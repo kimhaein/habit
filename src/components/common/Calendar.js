@@ -3,9 +3,6 @@ import { Calendar, Badge } from "antd";
 import moment from "moment";
 
 class Calendars extends Component {
-  /**
-   *
-   */
   getListData = value => {
     let listData = this.props.dateDate.filter(
       item => value === moment(item.date).format("YYYY-MM-DD")
@@ -27,12 +24,8 @@ class Calendars extends Component {
 
   render() {
     return (
-      <div>
-        <Calendar
-          fullscreen={false}
-          dateCellRender={this.dateCellRender}
-          validRange={[moment("2018-12-12"), moment("2018-12-30")]}
-        />
+      <div className="calendar">
+        <Calendar fullscreen={false} dateCellRender={this.dateCellRender} />
       </div>
     );
   }

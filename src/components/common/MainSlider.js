@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Slider from "react-slick";
 
 class MainSlider extends Component {
@@ -10,27 +10,26 @@ class MainSlider extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
-    const {cardList} = this.props
+    const { cardList } = this.props;
     return (
-      <Slider {...settings} >
+      <Slider {...settings}>
         <div className="main_slider">
-          <div className="slier_thumnail"></div>
+          <div className="slier_thumnail" />
           <p className="title">{cardList[0].title}</p>
           <div className="graph_wrap">
-            <span className="graph"></span>
+            <span className="graph" />
           </div>
           <p>80%</p>
         </div>
         <div className="main_slider">
-          <div className="slier_thumnail"></div>
+          <div className="slier_thumnail" />
           <p className="title">{cardList[1].title}</p>
           <div className="graph_wrap">
-            <span className="graph"></span>
+            <span className="graph" />
           </div>
           <p>80%</p>
         </div>
       </Slider>
-
     );
   }
 }
