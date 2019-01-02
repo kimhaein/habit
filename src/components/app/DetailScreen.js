@@ -42,7 +42,10 @@ class DetailScreen extends Component {
 
   render() {
     const { detailData } = this.props;
-    const style = { width: detailData.completion_rate + "%" };
+    const style = {
+      width: detailData.completion_rate + "%",
+      background: detailData.color
+    };
     return (
       <div className="detail_wrap">
         <div className="detail_title">

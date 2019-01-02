@@ -14,31 +14,29 @@ class App extends Component {
         cardId: 1,
         title: "매일 물 1리터 마시기",
         sticker_list: [
-          {
-            mon: true,
-            tue: true,
-            wed: false,
-            thu: false,
-            fri: true,
-            sat: false,
-            sun: true
-          }
-        ]
+          { stickerId: 1, weekEn: "mon", weekKo: "월요일", value: true },
+          { stickerId: 2, weekEn: "tue", weekKo: "화요일", value: true },
+          { stickerId: 3, weekEn: "wed", weekKo: "수요일", value: false },
+          { stickerId: 4, weekEn: "thu", weekKo: "목요일", value: false },
+          { stickerId: 5, weekEn: "fri", weekKo: "금요일", value: true },
+          { stickerId: 6, weekEn: "sat", weekKo: "토요일", value: false },
+          { stickerId: 7, weekEn: "sun", weekKo: "일요일", value: true }
+        ],
+        color: "#e57373"
       },
       {
         cardId: 2,
         title: "매일 스트레칭",
         sticker_list: [
-          {
-            mon: true,
-            tue: true,
-            wed: false,
-            thu: false,
-            fri: true,
-            sat: false,
-            sun: true
-          }
-        ]
+          { stickerId: 8, weekEn: "mon", weekKo: "월요일", value: false },
+          { stickerId: 9, weekEn: "tue", weekKo: "화요일", value: false },
+          { stickerId: 10, weekEn: "wed", weekKo: "수요일", value: false },
+          { stickerId: 11, weekEn: "thu", weekKo: "목요일", value: false },
+          { stickerId: 12, weekEn: "fri", weekKo: "금요일", value: true },
+          { stickerId: 13, weekEn: "sat", weekKo: "토요일", value: true },
+          { stickerId: 14, weekEn: "sun", weekKo: "일요일", value: true }
+        ],
+        color: "#fbc02d"
       }
     ],
     cardDetail: [
@@ -68,7 +66,8 @@ class App extends Component {
           }
         ],
         completion_rate: 80,
-        memo: "물을 마시자 물을 마시자"
+        memo: "물을 마시자 물을 마시자",
+        color: "#e57373"
       },
       {
         id: 2,
@@ -96,7 +95,8 @@ class App extends Component {
           }
         ],
         completion_rate: 50,
-        memo: "유투브 링크 : ~~~~"
+        memo: "유투브 링크 : ~~~~",
+        color: "#fbc02d"
       }
     ]
   };

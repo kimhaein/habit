@@ -2,9 +2,24 @@ import React, { Component } from "react";
 
 class CardList extends Component {
   _renderList = data => {
-    let html;
-    data.sticker_list.forEach(v => {});
-    return html;
+    const dataArray = data.sticker_list;
+    return (
+      <ul className="card_contents">
+        {dataArray.map(item => {
+          const bgcolor = item.value ? data.color : "";
+          const style = {
+            background: bgcolor,
+            borderColor: data.color
+          };
+          return (
+            <li key={item.stickerId} className="sticker_list">
+              <div className="sticker" style={style} />
+              <p>{item.weekKo}</p>
+            </li>
+          );
+        })}
+      </ul>
+    );
   };
 
   render() {
@@ -16,37 +31,7 @@ class CardList extends Component {
           <span />
         </div>
 
-        <ul className="card_contents">
-          {this._renderList(data)}
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>월요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>화요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>수요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>목요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>금요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>토요일</p>
-          </li>
-          <li className="sticker_list">
-            <div className="sticker" />
-            <p>일요일</p>
-          </li>
-        </ul>
+        {this._renderList(data)}
       </div>
     );
   }

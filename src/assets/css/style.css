@@ -192,9 +192,8 @@ textarea {
 .main_wrap .card_wrap .card_list .card_contents .sticker_list .sticker {
   width: 38px;
   height: 38px;
-  border: 1px #e57373 solid;
+  border: 1px dashed;
   border-radius: 50%;
-  background: #e57373;
 }
 .main_wrap .card_wrap .card_list .card_contents .sticker_list .sticker.empty {
   border-style: dashed;
