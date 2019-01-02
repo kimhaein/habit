@@ -13,24 +13,32 @@ class App extends Component {
       {
         cardId: 1,
         title: "매일 물 1리터 마시기",
-        mon: true,
-        tue: true,
-        wed: false,
-        thu: false,
-        fri: true,
-        sat: false,
-        sun: true
+        sticker_list: [
+          {
+            mon: true,
+            tue: true,
+            wed: false,
+            thu: false,
+            fri: true,
+            sat: false,
+            sun: true
+          }
+        ]
       },
       {
         cardId: 2,
         title: "매일 스트레칭",
-        mon: true,
-        tue: true,
-        wed: true,
-        thu: true,
-        fri: true,
-        sat: false,
-        sun: true
+        sticker_list: [
+          {
+            mon: true,
+            tue: true,
+            wed: false,
+            thu: false,
+            fri: true,
+            sat: false,
+            sun: true
+          }
+        ]
       }
     ],
     cardDetail: [

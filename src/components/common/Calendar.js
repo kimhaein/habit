@@ -3,6 +3,9 @@ import { Calendar, Badge } from "antd";
 import moment from "moment";
 
 class Calendars extends Component {
+  componentDidMount() {
+    moment.locale();
+  }
   getListData = value => {
     let listData = this.props.dateDate.filter(
       item => value === moment(item.date).format("YYYY-MM-DD")

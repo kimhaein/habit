@@ -10,7 +10,6 @@ class HomeScreen extends Component {
 
   render() {
     const listData = this.props.cardList;
-    console.log(listData);
     const cardList = listData.map(item => (
       <CardList
         changeScreen={() => this._changeScreen(item.cardId)}
