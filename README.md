@@ -21,7 +21,7 @@
 ## Library
 
 - moment : date library
-- antd : UI library
+- ant design : UI library
 - react-pose:animation library
 
 ## 업데이트 내역
@@ -29,6 +29,13 @@
 - 2018.12.17
   - 개발 환경 세팅
 - 2018.12.22
-  - UI 개발 중 (main)
+  - UI 개발 중 (HomeScreen)
 - 2018.12.26
-  - UI 개발 중 (detail)
+  - UI 개발 중 (DetailScreen)
+- 2018.12.28
+  - UI 개발 완료 (DetailScreen)
+- 2019.1.2
+  - UI 개발 완료 (HomeScreen)
+- 2018.1.4
+  - ant design library Customize
+  - UI 개발 완료 (SideNav,SignInScreen,SignUpScreen)

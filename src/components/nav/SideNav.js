@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Drawer } from "antd";
+import { Drawer, Avatar, Icon } from "antd";
+// Image
+import myImg from "../../assets/imgs/IMG_5131.jpg";
 
 class SideNav extends Component {
   render() {
@@ -10,13 +12,22 @@ class SideNav extends Component {
         closable={true}
         onClose={showDrawer}
         visible={modalVisible}
+        className="side_nav"
+        bodyStyle={{ sbackground: "#4b403d" }}
       >
-        <div>img</div>
-        <div>
-          <p>Main</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+        <div className="info_wrap">
+          <Avatar size={90} src={myImg} icon="user" />
+          <p>김혜인</p>
+        </div>
+        <div className="menu">
+          <p>Home</p>
+          <p>History</p>
+          <p>Rewards</p>
+          <p>Settings</p>
+        </div>
+        <div className="logout">
+          <Icon type="logout" />
+          <span style={{ marginLeft: "10px" }}>로그아웃</span>
         </div>
       </Drawer>
     );

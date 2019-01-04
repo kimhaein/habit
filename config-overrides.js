@@ -20,7 +20,7 @@ module.exports = function override(config, env) {
       "@disabled-color": "#d9d6d4", // disable state color
       "@border-radius-base": "4px", // major border radius
       "@border-color-base": "#4b403d", // major border color
-      "@box-shadow-base": "00 5px 10px 0 rgba(80, 92, 98, 0.13);"
+      "@box-shadow-base": "0 2px 8px rgba(0, 0, 0, .15);"
     },
     javascriptEnabled: true
   })(config, env);

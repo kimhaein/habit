@@ -4,7 +4,6 @@ import TopNav from "../nav/TopNav";
 // screen
 import DetailScreen from "../app/DetailScreen";
 import HomeScreen from "../app/HomeScreen";
-import SignUpScreen from "../app/SignUpScreen";
 
 class App extends Component {
   state = {
@@ -122,7 +121,7 @@ class App extends Component {
         return <DetailScreen detailData={detailData[0]} />;
       default:
         return (
-          <SignUpScreen
+          <HomeScreen
             changeScreen={this._changeScreen}
             cardList={this.state.cardList}
           />
