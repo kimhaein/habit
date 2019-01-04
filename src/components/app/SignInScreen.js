@@ -3,13 +3,7 @@ import { Form, Icon, Input, Button, Checkbox } from "antd";
 // Image
 import kakakoImg from "../../assets/imgs/kakao.png";
 
-class LoginScreen extends Component {
-  //input 값 변경
-  _handleChangeEvent = e => {
-    this.setState({
-      [e.target.name]: e.target.value
-    });
-  };
+class SignInScreen extends Component {
   render() {
     return (
       <div className="main_wrap">
@@ -20,7 +14,7 @@ class LoginScreen extends Component {
               <Input
                 size="large"
                 prefix={<Icon type="user" style={{ fontSize: 13 }} />}
-                placeholder="Username"
+                placeholder="UserID"
               />
             </Form.Item>
             <Form.Item>
@@ -48,4 +42,4 @@ class LoginScreen extends Component {
   }
 }
 
-export default LoginScreen;
+export default SignInScreen;
