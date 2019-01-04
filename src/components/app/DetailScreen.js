@@ -1,7 +1,11 @@
 import React, { Component } from "react";
-import { Modal } from "antd";
+import { message, Button, Popconfirm, Icon } from "antd";
 import Calendar from "../common/Calendar";
 import Memo from "../common/Memo";
+
+message.config({
+  top: 70
+});
 
 class DetailScreen extends Component {
   //input 값 변경
@@ -13,31 +17,12 @@ class DetailScreen extends Component {
 
   //삭제
   _deleteConfirm = () => {
-    const confirm = Modal.confirm;
-    confirm({
-      iconType: "close-circle",
-      title: "정말 삭제하시겠습니까?",
-      okText: "삭제",
-      okType: "danger",
-      cancelText: "취소",
-      onOk() {
-        console.log("Delete");
-      }
-    });
+    message.success("삭제");
   };
 
   //수정
   _editConfirm = () => {
-    const confirm = Modal.confirm;
-    confirm({
-      title: "수정하시겠습니까?",
-      okText: "수정",
-      okType: "danger",
-      cancelText: "취소",
-      onOk() {
-        console.log("edit");
-      }
-    });
+    message.success("수정");
   };
 
   render() {
@@ -46,6 +31,7 @@ class DetailScreen extends Component {
       width: detailData.completion_rate + "%",
       background: detailData.color
     };
+    const ButtonGroup = Button.Group;
     return (
       <div className="detail_wrap">
         <div className="detail_title">
@@ -67,12 +53,28 @@ class DetailScreen extends Component {
           handleChangeEvent={this._handleChangeEvent}
         />
         <div className="btn_wrap">
-          <button className="btn_m btn_color" onClick={this._deleteConfirm}>
-            삭제
-          </button>
-          <button className="btn_m f_right" onClick={this._editConfirm}>
-            수정
-          </button>
+          <ButtonGroup>
+            <Popconfirm
+              title="정말 삭제 하시겠습니까?"
+              onConfirm={this._deleteConfirm}
+              okText="삭제"
+              cancelText="취소"
+              icon={<Icon type="close-circle" style={{ color: "#e57373" }} />}
+            >
+              <Button type="primary">삭제</Button>
+            </Popconfirm>
+            <Popconfirm
+              title="수정 하시겠습니까?"
+              onConfirm={this._editConfirm}
+              okText="수정"
+              cancelText="취소"
+              icon={
+                <Icon type="question-circle" style={{ color: "#fbc02d" }} />
+              }
+            >
+              <Button>수정</Button>
+            </Popconfirm>
+          </ButtonGroup>
         </div>
       </div>
     );

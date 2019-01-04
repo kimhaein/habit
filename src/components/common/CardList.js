@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { Icon } from "antd";
+// Image
+import iconImg from "../../assets/imgs/icon.png";
 
 class CardList extends Component {
   _renderList = data => {
@@ -13,7 +16,9 @@ class CardList extends Component {
           };
           return (
             <li key={item.stickerId} className="sticker_list">
-              <div className="sticker" style={style} />
+              <div className="sticker" style={style}>
+                <img src={iconImg} alt="iconImg" />
+              </div>
               <p>{item.weekKo}</p>
             </li>
           );
