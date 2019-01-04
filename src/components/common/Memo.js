@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Input } from 'antd';
+const { TextArea } = Input;
 
 class Memo extends Component {
   render() {
@@ -6,7 +8,7 @@ class Memo extends Component {
     return (
       <div className="memo">
         <label>메모</label>
-        <textarea rows="8" onChange={handleChangeEvent} defaultValue={memo} />
+        <TextArea onChange={handleChangeEvent} defaultValue={memo} autosize={{ minRows: 8}} />
       </div>
     );
   }

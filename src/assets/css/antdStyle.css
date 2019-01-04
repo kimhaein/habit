@@ -3,3 +3,7 @@
 body {
   background: #efebe9 !important;
 }
+
+.ant-radio-group-small .ant-radio-button-wrapper {
+  display: none;
+}

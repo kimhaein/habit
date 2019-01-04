@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { message, Button, Popconfirm, Icon } from "antd";
+import { message, Button, Popconfirm, Icon, Progress } from "antd";
 import Calendar from "../common/Calendar";
 import Memo from "../common/Memo";
 
@@ -27,11 +27,8 @@ class DetailScreen extends Component {
 
   render() {
     const { detailData } = this.props;
-    const style = {
-      width: detailData.completion_rate + "%",
-      background: detailData.color
-    };
     const ButtonGroup = Button.Group;
+
     return (
       <div className="detail_wrap">
         <div className="detail_title">
@@ -44,9 +41,11 @@ class DetailScreen extends Component {
         </div>
         <Calendar dateDate={detailData.dateDate} />
         <div className="detail_rate_wrap">
-          <div className="detail_rate" style={style}>
-            <span>{detailData.completion_rate}%</span>
-          </div>
+          <Progress
+            percent={detailData.completion_rate}
+            status="active"
+            strokeColor={"#e57373"}
+          />
         </div>
         <Memo
           memo={detailData.memo}

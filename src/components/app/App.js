@@ -4,6 +4,7 @@ import TopNav from "../nav/TopNav";
 // screen
 import DetailScreen from "../app/DetailScreen";
 import HomeScreen from "../app/HomeScreen";
+import LoginScreen from "../app/LoginScreen";
 
 class App extends Component {
   state = {
@@ -98,7 +99,11 @@ class App extends Component {
         memo: "유투브 링크 : ~~~~",
         color: "#fbc02d"
       }
-    ]
+    ],
+    join: {
+      userName: "username",
+      password: "password"
+    }
   };
 
   _changeScreen = detailNo => {
@@ -117,7 +122,7 @@ class App extends Component {
         return <DetailScreen detailData={detailData[0]} />;
       default:
         return (
-          <HomeScreen
+          <LoginScreen
             changeScreen={this._changeScreen}
             cardList={this.state.cardList}
           />

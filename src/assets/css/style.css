@@ -144,7 +144,7 @@ textarea {
   background: #ffffff;
 }
 .main_wrap .card_wrap .card_list .card_header {
-  padding-top: 16px;
+  padding-top: 12px;
 }
 .main_wrap .card_wrap .card_list .card_contents {
   overflow: hidden;
@@ -227,7 +227,7 @@ textarea {
 }
 .detail_wrap .calendar {
   margin: 16px;
-  padding: 10px;
+  padding: 14px;
   background: #ffffff;
   box-shadow: 0 5px 10px 0 rgba(80, 92, 98, 0.13);
   box-sizing: border-box;
@@ -235,22 +235,12 @@ textarea {
 .detail_wrap .detail_rate_wrap {
   height: 25px;
   margin: 16px;
+  padding: 0 14px;
   background: #ffffff;
-}
-.detail_wrap .detail_rate {
-  height: 25px;
-  background: #4b403d;
-}
-.detail_wrap .detail_rate span {
-  float: right;
-  margin-right: 10px;
-  line-height: 25px;
-  font-weight: 600;
-  color: #ffffff;
 }
 .detail_wrap .memo {
   margin: 16px;
-  padding: 10px;
+  padding: 14px;
   background: #ffffff;
 }
 .detail_wrap .memo label {
@@ -263,7 +253,15 @@ textarea {
 
 /* LoginScreen */
 .bg_wrap {
-  margin: 16px;
+  width: calc(100% - 32px);
+  height: 80vh;
+  margin: 0 16px;
+  margin-top: 5vh;
   padding: 16px;
   background: #ffffff;
+}
+.bg_wrap h2 {
+  margin: 15px 0 30px;
+  font-size: 20px;
+  text-align: center;
 }
