@@ -15,7 +15,16 @@ a {
   color: #4b403d;
 }
 .btn_wrap {
+  overflow: hidden;
   margin: 16px;
+}
+.btn_L {
+  width: 48%;
+  float: left;
+}
+.btn_R {
+  width: 48%;
+  float: right;
 }
 input {
   width: 100%;

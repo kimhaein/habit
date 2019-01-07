@@ -27,7 +27,6 @@ class DetailScreen extends Component {
 
   render() {
     const { detailData } = this.props;
-    const ButtonGroup = Button.Group;
 
     return (
       <div className="detail_wrap">
@@ -52,7 +51,7 @@ class DetailScreen extends Component {
           handleChangeEvent={this._handleChangeEvent}
         />
         <div className="btn_wrap">
-          <ButtonGroup>
+          <div className="btn_L">
             <Popconfirm
               title="정말 삭제 하시겠습니까?"
               onConfirm={this._deleteConfirm}
@@ -60,8 +59,12 @@ class DetailScreen extends Component {
               cancelText="취소"
               icon={<Icon type="close-circle" style={{ color: "#e57373" }} />}
             >
-              <Button type="primary">삭제</Button>
+              <Button type="primary" size={"large"} block>
+                삭제
+              </Button>
             </Popconfirm>
+          </div>
+          <div className="btn_R">
             <Popconfirm
               title="수정 하시겠습니까?"
               onConfirm={this._editConfirm}
@@ -71,9 +74,11 @@ class DetailScreen extends Component {
                 <Icon type="question-circle" style={{ color: "#fbc02d" }} />
               }
             >
-              <Button>수정</Button>
+              <Button size={"large"} block>
+                수정
+              </Button>
             </Popconfirm>
-          </ButtonGroup>
+          </div>
         </div>
       </div>
     );

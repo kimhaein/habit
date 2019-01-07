@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Icon } from "antd";
 // Image
 import iconImg from "../../assets/imgs/icon.png";
 
@@ -31,8 +32,17 @@ class CardList extends Component {
     return (
       <div className="card_list" onClick={changeScreen}>
         <div className="card_header">
-          <p>{data.title}</p>
-          <span />
+          <p className="f_left">{data.title}</p>
+          <span className="f_right">
+            <Icon
+              type="ellipsis"
+              style={{
+                fontSize: 20,
+                transform: "rotate(90deg)",
+                marginRight: "-10px"
+              }}
+            />
+          </span>
         </div>
 
         {this._renderList(data)}

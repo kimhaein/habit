@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from "react";
 // Nav
-import TopNav from "../nav/TopNav";
+import TopNav from "./components/nav/TopNav";
 // screen
-import DetailScreen from "../app/DetailScreen";
-import HomeScreen from "../app/HomeScreen";
+import DetailScreen from "./components/app/DetailScreen";
+import HomeScreen from "./components/app/HomeScreen";
 
 class App extends Component {
   state = {
