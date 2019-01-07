@@ -90,12 +90,18 @@ textarea {
 .side_nav .menu {
   font-size: 18px;
 }
-.side_nav .logout {
+.side_nav .menu p a {
+  color: #ffffff;
+}
+.side_nav .login_state {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 30px;
-  width: 80px;
-  margin-left: -40px;
+  width: 100%;
+  /* text-align: center; */
+}
+.side_nav .login_state > span a {
+  display: inline;
 }
 /* main_slider */
 .main_wrap {
@@ -172,6 +178,7 @@ textarea {
   background: #ffffff;
 }
 .main_wrap .card_wrap .card_list .card_header {
+  overflow: hidden;
   padding-top: 12px;
 }
 .main_wrap .card_wrap .card_list .card_contents {

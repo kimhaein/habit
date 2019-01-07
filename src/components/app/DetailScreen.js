@@ -8,6 +8,68 @@ message.config({
 });
 
 class DetailScreen extends Component {
+  state = {
+    detailData: [
+      {
+        id: 1,
+        title: "매일 물 1리터 마시기",
+        dateDate: [
+          {
+            dateID: 1,
+            date: "2018-11-24",
+            type: "default"
+          },
+          {
+            dateID: 2,
+            date: "2018-11-25",
+            type: "processing"
+          },
+          {
+            dateID: 3,
+            date: "2018-12-26",
+            type: "default"
+          },
+          {
+            dateID: 4,
+            date: "2018-12-27",
+            type: "processing"
+          }
+        ],
+        completion_rate: 80,
+        memo: "물을 마시자 물을 마시자",
+        color: "#e57373"
+      },
+      {
+        id: 2,
+        title: "매일 스트레칭",
+        dateDate: [
+          {
+            dateID: 1,
+            date: "2018-12-24",
+            type: "processing"
+          },
+          {
+            dateID: 2,
+            date: "2018-12-25",
+            type: "processing"
+          },
+          {
+            dateID: 3,
+            date: "2018-12-26",
+            type: "processing"
+          },
+          {
+            dateID: 4,
+            date: "2018-12-27",
+            type: "processing"
+          }
+        ],
+        completion_rate: 50,
+        memo: "유투브 링크 : ~~~~",
+        color: "#fbc02d"
+      }
+    ]
+  };
   //input 값 변경
   _handleChangeEvent = e => {
     this.setState({
@@ -26,7 +88,8 @@ class DetailScreen extends Component {
   };
 
   render() {
-    const { detailData } = this.props;
+    const { cardId } = this.props.match.params;
+    const detailData = this.state.detailData[cardId - 1];
 
     return (
       <div className="detail_wrap">

@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 import SideNav from "./SideNav";
 // Image
 import sideNavImg from "../../assets/imgs/icons8-menu-32.png";
@@ -22,14 +23,14 @@ class TopNav extends Component {
             <img src={sideNavImg} alt="sideNav" />
           </div>
           <div className="top_logo">
-            <a href="/">
+            <Link to="/">
               <img src={topLogoImg} alt="topLogo" />
-            </a>
+            </Link>
           </div>
           <div className="btn_create">
-            <a href="/">
+            <Link to="/create">
               <img src={createImg} alt="create" />
-            </a>
+            </Link>
           </div>
         </div>
         <SideNav

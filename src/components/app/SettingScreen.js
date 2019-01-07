@@ -1,14 +1,15 @@
 import React, { Component } from "react";
 import TopNav from "../nav/TopNav";
 
-class ChartScreen extends Component {
+class SettingScreen extends Component {
   render() {
     return (
       <div>
         <TopNav />
+        <div className="main_wrap"> {"SettingScreen"}</div>
       </div>
     );
   }
 }
 
-export default ChartScreen;
+export default SettingScreen;
