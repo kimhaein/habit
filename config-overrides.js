@@ -9,7 +9,7 @@ module.exports = function override(config, env) {
   config = rewireLess.withLoaderOptions({
     modifyVars: {
       "@primary-color": "#4b403d", // primary color for all components
-      "@link-color": "#ffffff", // link color
+      "@link-color": "#4b403d", // link color
       "@success-color": "#9ccc65", // success state color
       "@warning-color": "#fbc02d", // warning state color
       "@error-color": "#e57373", // error state color

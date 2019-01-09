@@ -16,22 +16,37 @@ class DetailScreen extends Component {
         dateDate: [
           {
             dateID: 1,
-            date: "2018-11-24",
-            type: "default"
+            date: "2019-01-07",
+            type: "processing"
           },
           {
             dateID: 2,
-            date: "2018-11-25",
+            date: "2019-01-08",
             type: "processing"
           },
           {
             dateID: 3,
-            date: "2018-12-26",
+            date: "2019-01-09",
             type: "default"
           },
           {
             dateID: 4,
-            date: "2018-12-27",
+            date: "2019-01-10",
+            type: "default"
+          },
+          {
+            dateID: 5,
+            date: "2019-01-11",
+            type: "processing"
+          },
+          {
+            dateID: 6,
+            date: "2019-01-12",
+            type: "default"
+          },
+          {
+            dateID: 7,
+            date: "2019-01-13",
             type: "processing"
           }
         ],
@@ -70,6 +85,7 @@ class DetailScreen extends Component {
       }
     ]
   };
+
   //input 값 변경
   _handleChangeEvent = e => {
     this.setState({
@@ -89,6 +105,7 @@ class DetailScreen extends Component {
 
   render() {
     const { cardId } = this.props.match.params;
+    console.log(this.props.match.params);
     const detailData = this.state.detailData[cardId - 1];
 
     return (

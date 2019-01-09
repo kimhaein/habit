@@ -42,7 +42,7 @@ class CardList extends Component {
                 style={{
                   fontSize: 20,
                   transform: "rotate(90deg)",
-                  marginRight: "-10px"
+                  marginRight: "-9px"
                 }}
               />
             </span>

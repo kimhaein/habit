@@ -102,6 +102,7 @@ textarea {
 }
 .side_nav .login_state > span a {
   display: inline;
+  color: #ffffff;
 }
 /* main_slider */
 .main_wrap {
@@ -259,6 +260,7 @@ textarea {
   background: transparent;
   color: #e2e8ed;
   text-align: center;
+  font-size: 16px;
 }
 .detail_wrap .calendar {
   margin: 16px;
