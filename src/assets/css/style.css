@@ -302,3 +302,32 @@ textarea {
   font-size: 20px;
   text-align: center;
 }
+
+/* RewardsScreen */
+.rewards_wrap {
+  width: calc(100% - 32px);
+  height: 80px;
+  margin: 16px 16px;
+  padding: 16px;
+  background: #ffffff;
+}
+.rewards_wrap > div {
+  float:left;
+}
+.rewards_wrap > .thumnail {
+  margin: 4px 0;
+}
+.rewards_wrap > .rewards_info {
+  margin: 6px 10px;
+}
+.rewards_wrap > .rewards_info p {
+  margin-bottom:0;
+  font-size:12px
+}
+.rewards_wrap > .rewards_info p:first-child {
+  font-size:14px
+}
+.rewards_wrap .rewards_result {
+  float: right;
+  margin-top:8px;
+}

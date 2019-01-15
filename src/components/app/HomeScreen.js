@@ -38,13 +38,14 @@ class HomeScreen extends Component {
   };
   render() {
     const listData = this.state.cardList;
-    const cardList = listData.map(item => (
-      <CardList key={item.cardId} data={item} />
-    ));
     return (
       <div className="main_wrap">
         <MainSlider cardList={listData} />
-        <div className="card_wrap">{cardList}</div>
+        <div className="card_wrap">
+          {listData.map(item => (
+            <CardList key={item.cardId} data={item} />
+          ))}
+        </div>
       </div>
     );
   }
