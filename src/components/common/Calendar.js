@@ -27,9 +27,9 @@ class Calendars extends Component {
 
   render() {
     return (
-      <div className="calendar">
-        <Calendar fullscreen={false} dateCellRender={this.dateCellRender} />
-      </div>
+
+        <Calendar className="calendar" fullscreen={false} dateCellRender={this.dateCellRender} />
+      
     );
   }
 }

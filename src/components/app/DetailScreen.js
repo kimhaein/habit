@@ -116,6 +116,7 @@ class DetailScreen extends Component {
             name="title"
             onChange={this._handleChangeEvent}
             defaultValue={detailData.title}
+
           />
         </div>
         <Calendar dateDate={detailData.dateDate} />

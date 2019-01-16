@@ -264,9 +264,9 @@ textarea {
 }
 .detail_wrap .calendar {
   margin: 16px;
-  padding: 14px 16px;
+  padding: 14px 0;
   background: #ffffff;
-  box-shadow: 0 5px 10px 0 rgba(80, 92, 98, 0.13);
+  /* box-shadow: 0 5px 10px 0 rgba(80, 92, 98, 0.13); */
   box-sizing: border-box;
 }
 .detail_wrap .detail_rate_wrap {
