@@ -43,3 +43,5 @@
   - react router 작업 완료
 - 2018.1.15
   - UI 개발 완료 (RewardsScreen)
+- 2018.1.16
+  - UI 개발 완료 (SettingScreen)

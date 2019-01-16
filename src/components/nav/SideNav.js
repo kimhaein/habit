@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Drawer, Avatar, Icon } from "antd";
+import { Drawer, Avatar } from "antd";
 // Image
 import myImg from "../../assets/imgs/IMG_5131.jpg";
 
@@ -27,9 +27,9 @@ class SideNav extends Component {
           <p onClick={this._closeDrawer}>
             <Link to="/">Home</Link>
           </p>
-          <p onClick={this._closeDrawer}>
+          {/* <p onClick={this._closeDrawer}>
             <Link to="/history">History</Link>
-          </p>
+          </p> */}
           <p onClick={this._closeDrawer}>
             <Link to="/rewards">Rewards</Link>
           </p>
