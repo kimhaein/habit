@@ -8,15 +8,15 @@
 #root {
   position: relative;
 }
-a {
+/* a {
   display: block;
   width: 100%;
   height: 100%;
   color: #4b403d;
-}
+} */
 .btn_wrap {
   overflow: hidden;
-  margin: 16px;
+  /* margin: 16px; */
 }
 .btn_L {
   width: 48%;
@@ -25,6 +25,10 @@ a {
 .btn_R {
   width: 48%;
   float: right;
+}
+.btn a {
+  background:#4b403d;
+  color:#fff;
 }
 input {
   width: 100%;
@@ -114,7 +118,7 @@ textarea {
 .main_wrap .main_slider {
   width: 100%;
   height: 230px;
-  padding-top: 25px;
+  padding-top: 30px;
   box-sizing: border-box;
   background: #4b403d;
 }
@@ -124,17 +128,9 @@ textarea {
   margin: 0 auto;
 }
 .main_wrap .main_slider p {
-  margin: 20px 0;
+  margin: 15px 0;
   text-align: center;
   color: #ffffff;
-}
-.main_wrap .main_slider .title:after {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 1px;
-  margin: 10px auto;
-  background: #ffffff;
 }
 .main_wrap .main_slider .graph_wrap {
   position: relative;
@@ -170,7 +166,7 @@ textarea {
 }
 .main_wrap .card_wrap .card_list {
   width: 100%;
-  height: 190px;
+  height: 195px;
   margin: 16px 16px 0;
   padding: 0 16px;
   box-sizing: border-box;
@@ -188,7 +184,7 @@ textarea {
   margin: 0 auto;
   text-align: center;
 }
-.main_wrap .card_wrap .card_list .card_contents .sticker_list {
+.sticker_list {
   float: left;
   margin: 0 10px;
 }
@@ -204,7 +200,7 @@ textarea {
 .main_wrap .card_wrap .card_list .card_contents .sticker_list:nth-child(7) {
   margin-right: 15px;
 }
-.main_wrap .card_wrap .card_list .card_contents .sticker_list .sticker {
+.sticker_list .sticker {
   width: 38px;
   height: 38px;
   border: 1px dashed;
@@ -214,7 +210,7 @@ textarea {
   border-style: dashed;
   background: #ffffff;
 }
-.main_wrap .card_wrap .card_list .card_contents .sticker_list .sticker img {
+.sticker img {
   width: 27px;
   height: 27px;
   margin-top: 5px;
@@ -364,4 +360,30 @@ textarea {
   margin:10px;
   font-size: 10px;
   text-align: center;
+}
+
+/* createScrenn */
+.create_wrap {
+  margin-top:60px;
+  width: 100%;
+  background:#fff;
+  padding:16px;
+}
+.create_wrap > div {
+  margin-bottom:16px;
+}
+/* .btn_group > div {
+  width:100%;
+}
+.create_wrap .btn_group > div label {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+} */
+
+.date-picker-list .am-list-item .am-list-line .am-list-extra {
+  flex-basis: initial;
+}
+.avatar-uploader img {
+  width:100%;
 }

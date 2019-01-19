@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 // css
 import "./assets/css/antdStyle.css";
+import 'antd-mobile/dist/antd-mobile.css';
 import "./assets/css/reset.css";
 import "./assets/css/style.css";
 import Root from "./client/Root";

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TopNav from "../nav/TopNav";
-import { Avatar,Switch } from "antd";
+import { Avatar,Switch,Button } from "antd";
+import { Modal} from 'antd-mobile';
 // Image
 import myImg from "../../assets/imgs/IMG_5131.jpg";
 
@@ -20,7 +21,14 @@ class SettingScreen extends Component {
             </div>
             <div className="setting_list_wrap">
               <div className="setting_list">
-                <span>로그아웃</span>
+                <span onClick={() =>
+                        Modal.alert('로그아웃', '로그아웃 하시겠습니까?', [
+                          { text: 'Cancel', onPress: () => console.log('cancel') },
+                          { text: 'Ok', onPress: () => console.log('ok') },
+                        ])
+                      }>
+                  로그아웃
+                </span>
                 <span></span>
               </div>  
               <div className="setting_list">

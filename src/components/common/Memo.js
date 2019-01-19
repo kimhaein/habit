@@ -7,7 +7,7 @@ class Memo extends Component {
     const { memo, handleChangeEvent } = this.props;
     return (
       <div className="memo">
-        <label>메모</label>
+        <p>메모</p>
         <TextArea onChange={handleChangeEvent} defaultValue={memo} autosize={{ minRows: 8}} />
       </div>
     );

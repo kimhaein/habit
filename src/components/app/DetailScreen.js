@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { message, Button, Popconfirm, Icon, Progress } from "antd";
+import { message, Button,Progress } from "antd";
+import { Modal} from 'antd-mobile';
 import Calendar from "../common/Calendar";
 import Memo from "../common/Memo";
 
@@ -133,32 +134,28 @@ class DetailScreen extends Component {
         />
         <div className="btn_wrap">
           <div className="btn_L">
-            <Popconfirm
-              title="정말 삭제 하시겠습니까?"
-              onConfirm={this._deleteConfirm}
-              okText="삭제"
-              cancelText="취소"
-              icon={<Icon type="close-circle" style={{ color: "#e57373" }} />}
-            >
-              <Button type="primary" size={"large"} block>
-                삭제
-              </Button>
-            </Popconfirm>
+            <Button
+                onClick={() =>
+                  Modal.alert('삭제', '삭제하시겠습니까?', [
+                    { text: 'Cancel', onPress: () => console.log('cancel') },
+                    { text: 'Ok', onPress: () => console.log('ok') },
+                  ])
+                }
+              >
+              삭제
+            </Button>
           </div>
           <div className="btn_R">
-            <Popconfirm
-              title="수정 하시겠습니까?"
-              onConfirm={this._editConfirm}
-              okText="수정"
-              cancelText="취소"
-              icon={
-                <Icon type="question-circle" style={{ color: "#fbc02d" }} />
-              }
-            >
-              <Button size={"large"} block>
-                수정
-              </Button>
-            </Popconfirm>
+            <Button
+                onClick={() =>
+                  Modal.alert('수정', '수정하시겠습니까?', [
+                    { text: 'Cancel', onPress: () => console.log('cancel') },
+                    { text: 'Ok', onPress: () => console.log('ok') },
+                  ])
+                }
+              >
+              수정
+            </Button>
           </div>
         </div>
       </div>
