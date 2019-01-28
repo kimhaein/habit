@@ -7,7 +7,7 @@ class Calendars extends Component {
     moment.locale();
   }
   getListData = value => {
-    let listData = this.props.dateDate.filter(
+    let listData = this.props.dateData.filter(
       item => value === moment(item.date).format("YYYY-MM-DD")
     );
     return listData;
@@ -27,9 +27,11 @@ class Calendars extends Component {
 
   render() {
     return (
-
-        <Calendar className="calendar" fullscreen={false} dateCellRender={this.dateCellRender} />
-      
+      <Calendar
+        className="calendar"
+        fullscreen={false}
+        dateCellRender={this.dateCellRender}
+      />
     );
   }
 }

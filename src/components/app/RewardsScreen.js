@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import TopNav from "../nav/TopNav";
 import RewardsList from "../common/RewardsList";
 
-
 class RewardsScreen extends Component {
   state = {
     rewardsList: [
@@ -12,7 +11,7 @@ class RewardsScreen extends Component {
         rewardsTitle: "아이패드",
         rewardsSdate: "2019-01-02",
         rewardsEdate: "2019-01-20",
-        rewardsResult: false,
+        rewardsResult: false
       },
       {
         rewardsId: 1,
@@ -20,8 +19,8 @@ class RewardsScreen extends Component {
         rewardsTitle: "상해여행",
         rewardsSdate: "2018-12-02",
         rewardsEdate: "2019-01-20",
-        rewardsResult: true,
-      },
+        rewardsResult: true
+      }
     ]
   };
 
@@ -30,12 +29,11 @@ class RewardsScreen extends Component {
     return (
       <div>
         <TopNav />
-        <div className="main_wrap"> 
-        {
-          rewardsList.map((data,i)=>{
-            return <RewardsList key={data.rewardsId} data={data} />
-          })
-        }
+        <div className="main_wrap">
+          <div className="title">보상 리스트</div>
+          {rewardsList.map((data, i) => {
+            return <RewardsList key={data.rewardsId} data={data} />;
+          })}
         </div>
       </div>
     );

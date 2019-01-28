@@ -1,18 +1,16 @@
 import React, { Component } from "react";
-import { message,Input,TimePicker,DatePicker } from "antd";
-import { Modal,ImagePicker,Button} from 'antd-mobile';
+import { message, Input, TimePicker, DatePicker } from "antd";
+import { Modal, ImagePicker, Button } from "antd-mobile";
 import TopNav from "../nav/TopNav";
 import Memo from "../common/Memo";
 // Image
 import iconImg from "../../assets/imgs/icon.png";
 
-
 class CreateScreen extends Component {
-
   state = {
-    files:[]
+    files: []
   };
-  
+
   _onChange(time, timeString) {
     console.log(time, timeString);
   }
@@ -22,29 +20,46 @@ class CreateScreen extends Component {
   };
 
   onCancel = () => {
-    document.getElementsByTagName('body')[0].style.overflowY = this.originbodyScrollY;
+    document.getElementsByTagName(
+      "body"
+    )[0].style.overflowY = this.originbodyScrollY;
     this.setState({
       show: false,
       startTime: undefined,
-      endTime: undefined,
+      endTime: undefined
     });
-  }
+  };
 
   onConfirm = (startTime, endTime) => {
-    document.getElementsByTagName('body')[0].style.overflowY = this.originbodyScrollY;
+    document.getElementsByTagName(
+      "body"
+    )[0].style.overflowY = this.originbodyScrollY;
     this.setState({
       show: false,
       startTime,
-      endTime,
+      endTime
     });
-  }
+  };
 
   //이미지
   onImgChange = (files, type, index) => {
     console.log(files, type, index);
     this.setState({
-      files,
+      files
     });
+  };
+
+  //onChangeSticker
+  onChangeSticker = event => {
+    const CLASS = "selected";
+    const hasClass = event.target.parentNode.classList.contains(CLASS);
+    const sections = document.querySelectorAll(`.${CLASS}`);
+    for (let i = 0; i < sections.length; i++) {
+      sections[i].classList.remove(CLASS);
+    }
+    if (!hasClass) {
+      event.target.parentNode.classList.add(CLASS);
+    }
   };
 
   render() {
@@ -57,19 +72,30 @@ class CreateScreen extends Component {
           <div className="create_wrap">
             <div>
               <p>목표</p>
-              <Input   />
+              <Input />
             </div>
-            <div style={{overflow:'hidden'}}>
+            <div>
               <p>기간</p>
-                <DatePicker style={{float:'left',width:'48%'}} placeholder="시작일" />
-                <DatePicker style={{float:'right',width:'48%'}} placeholder="종료일" />
+              <DatePicker
+                style={{ float: "left", width: "48%" }}
+                placeholder="시작일"
+              />
+              <DatePicker
+                style={{ float: "right", width: "48%" }}
+                placeholder="종료일"
+              />
             </div>
             <div>
               <p>알람</p>
-              <TimePicker use12Hours format="h:mm a" />
+              <TimePicker
+                style={{ width: "100%" }}
+                use12Hours
+                format="h:mm a"
+                placeholder="알람시간"
+              />
             </div>
-            <div style={{overflow:'hidden'}}>
-              <div style={{float:'left',width:'25%'}}>
+            <div>
+              <div className="rewards" style={{ float: "left" }}>
                 <p>보상</p>
                 <ImagePicker
                   length="1"
@@ -80,33 +106,107 @@ class CreateScreen extends Component {
                   onAddImageClick={this.onAddImageClick}
                 />
               </div>
-              <div style={{float:'right',width:'70%'}}>
+              <div
+                style={{
+                  float: "right",
+                  width: "calc(100% - 80px)",
+                  marginTop: "30px"
+                }}
+              >
                 <p>목표달성문구</p>
-                <Input.TextArea/>
+                <Input />
               </div>
             </div>
             <div>
               <p>스티커</p>
               <ul className="card_contents">
-                <li className="sticker_list">
-                  <div className="sticker" style={{background: 'red',borderColor: 'red'}}>
+                <li className="sticker_list selected">
+                  <label className="sticker" htmlFor="stiker_01">
                     <img src={iconImg} alt="iconImg" />
-                  </div>
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_01"
+                    name="color"
+                    value="#ef9a9a"
+                    checked="checked"
+                    onChange={this.onChangeSticker}
+                  />
+                </li>
+                <li className="sticker_list">
+                  <label className="sticker" htmlFor="stiker_02">
+                    <img src={iconImg} alt="iconImg" />
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_02"
+                    name="color"
+                    value="#e57373"
+                    onChange={this.onChangeSticker}
+                  />
+                </li>
+                <li className="sticker_list">
+                  <label className="sticker" htmlFor="stiker_03">
+                    <img src={iconImg} alt="iconImg" />
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_03"
+                    name="color"
+                    value="#fbc02d"
+                    onChange={this.onChangeSticker}
+                  />
+                </li>
+                <li className="sticker_list">
+                  <label className="sticker" htmlFor="stiker_04">
+                    <img src={iconImg} alt="iconImg" />
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_04"
+                    name="color"
+                    value="#9ccc65"
+                    onChange={this.onChangeSticker}
+                  />
+                </li>
+                <li className="sticker_list">
+                  <label className="sticker" htmlFor="stiker_05">
+                    <img src={iconImg} alt="iconImg" />
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_05"
+                    name="color"
+                    value="#1a237e"
+                    onChange={this.onChangeSticker}
+                  />
+                </li>
+                <li className="sticker_list">
+                  <label className="sticker" htmlFor="stiker_06">
+                    <img src={iconImg} alt="iconImg" />
+                  </label>
+                  <input
+                    type="radio"
+                    id="stiker_06"
+                    name="color"
+                    value="#9575cd"
+                    onChange={this.onChangeSticker}
+                  />
                 </li>
               </ul>
             </div>
-            <Memo
-              memo={''}
-              handleChangeEvent={this._handleChangeEvent}
-            />
+            <Memo memo={""} handleChangeEvent={this._handleChangeEvent} />
             <div className="btn_wrap">
               <div className="btn">
                 <Button
                   type="primary"
                   onClick={() =>
-                    Modal.alert('등록', '등록하시겠습니까?', [
-                      { text: 'Cancel', onPress: () => console.log('cancel') },
-                      { text: 'Ok', onPress: () => console.log('ok') },
+                    Modal.alert("등록", "등록하시겠습니까?", [
+                      {
+                        text: "Cancel",
+                        onPress: () => console.log("cancel")
+                      },
+                      { text: "Ok", onPress: () => console.log("ok") }
                     ])
                   }
                 >

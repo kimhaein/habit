@@ -8,3 +8,25 @@ body {
   display: none;
 }
 
+/* ImagePicker customize */
+.am-image-picker-list {
+  padding: 0;
+  margin: 0;
+}
+.am-image-picker-list .am-flexbox .am-flexbox-item {
+  width: 70px;
+  height: 70px;
+}
+.am-image-picker-list .am-image-picker-item .am-image-picker-item-content {
+  background-position: center;
+}
+
+/* input */
+.ant-input:focus {
+  box-shadow: none !important;
+}
+
+/* button */
+.am-button-primary.am-button-active {
+  background: #4b403d;
+}

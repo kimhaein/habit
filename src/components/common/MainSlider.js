@@ -18,7 +18,7 @@ class MainSlider extends Component {
           <div className="slider_thumnail">
             <Avatar shape="square" size={50} icon="gift" />
           </div>
-          <p className="title">{cardList[0].title}</p>
+          <p>{cardList[0].title}</p>
           <div className="graph_wrap">
             <span className="graph" />
           </div>
@@ -28,10 +28,11 @@ class MainSlider extends Component {
           <div className="slider_thumnail">
             <Avatar shape="square" size={50} icon="gift" />
           </div>
-          <p className="title">{cardList[1].title}</p>
+          <p>{cardList[0].title}</p>
           <div className="graph_wrap">
-            <Progress percent={50} size="small" status="active" />
+            <span className="graph" />
           </div>
+          <p>80%</p>
         </div>
       </Slider>
     );
