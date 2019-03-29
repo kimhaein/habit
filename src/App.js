@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import {
   Home,
   Detail,
@@ -9,9 +9,9 @@ import {
   History,
   Rewards,
   Setting
-} from "./index";
+} from "./components/index";
 // Nav
-import TopNav from "./nav/TopNav";
+import TopNav from "./components/nav/TopNav";
 
 class App extends Component {
   state = {
