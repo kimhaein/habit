@@ -13,16 +13,16 @@
 
 ## Server
 
-- Node
-- koa
-- MongoDB
+- PHP
+- MariaDB
+- Mysql
 - REST API
 
 ## Library
 
 - moment : date library
 - ant design : UI library
-- react-pose : animation library
+- react-pose:animation library
 
 ## 업데이트 내역
 
