@@ -1,12 +1,13 @@
-const { injectBabelPlugin } = require("react-app-rewired");
-const rewireLess = require("react-app-rewire-less");
+const { override, fixBabelImports, addLessLoader } = require("customize-cra");
 
-module.exports = function override(config, env) {
-  config = injectBabelPlugin(
-    ["import", { libraryName: "antd", libraryDirectory: "es", style: true }], // change importing css to less
-    config
-  );
-  config = rewireLess.withLoaderOptions({
+module.exports = override(
+  fixBabelImports("import", {
+    libraryName: "antd",
+    libraryDirectory: "es",
+    style: true // change importing css to less
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
     modifyVars: {
       "@primary-color": "#4b403d", // primary color for all components
       "@link-color": "#4b403d", // link color
@@ -21,8 +22,6 @@ module.exports = function override(config, env) {
       "@border-radius-base": "4px", // major border radius
       "@border-color-base": "#4b403d", // major border color
       "@box-shadow-base": "0 2px 8px rgba(0, 0, 0, .15);"
-    },
-    javascriptEnabled: true
-  })(config, env);
-  return config;
-};
+    }
+  })
+);

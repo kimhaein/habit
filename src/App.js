@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 import {
   Home,
   Detail,

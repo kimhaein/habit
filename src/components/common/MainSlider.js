@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import { Avatar, Progress } from "antd";
+import { Avatar } from "antd";
 
 class MainSlider extends Component {
   render() {
