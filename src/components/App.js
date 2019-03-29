@@ -9,9 +9,9 @@ import {
   History,
   Rewards,
   Setting
-} from "./components/index";
+} from "./index";
 // Nav
-import TopNav from "./components/nav/TopNav";
+import TopNav from "./nav/TopNav";
 
 class App extends Component {
   state = {
