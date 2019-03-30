@@ -11,3 +11,4 @@ import { pender } from "redux-pender";
 const initialState = Map({});
 
 //reducer
+export default handleAction({}, initialState);
